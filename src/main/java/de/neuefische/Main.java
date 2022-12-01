@@ -39,5 +39,14 @@ public class Main {
 
         // Unix Timestamp
         System.out.println("UNIX TIMESTAMP: " + zonedDateTime.toEpochSecond());
+
+        // Date Time parsing
+        LocalDate parsedLocalDate = LocalDate.parse("2022-12-01");
+        LocalDateTime parsedLocalDateTime = LocalDateTime.parse("2022-12-01T12:32:08.377805");
+        ZonedDateTime parsedZonedDateTime = ZonedDateTime.parse("2022-12-01T12:32:08.377805+01:00");
+
+        System.out.println(parsedLocalDate);
+        System.out.println(parsedLocalDateTime);
+        System.out.println(parsedZonedDateTime);
     }
 }
