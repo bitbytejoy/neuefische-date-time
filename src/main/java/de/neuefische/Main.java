@@ -5,9 +5,11 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
+
         System.out.println(ZoneId.getAvailableZoneIds());
 
         // LocalDate
@@ -30,7 +32,9 @@ public class Main {
         System.out.println(zonedDateTime);
 
         String zonedDateTimePattern = "'Elvedin hat gesagt' dd, MMM, yyyy, HH:mm:ss zzzz";
-        DateTimeFormatter zonedDateTimeFormatter = DateTimeFormatter.ofPattern(zonedDateTimePattern);
+        DateTimeFormatter zonedDateTimeFormatter = DateTimeFormatter
+                .ofPattern(zonedDateTimePattern)
+                .withLocale(Locale.GERMAN);
         System.out.println(zonedDateTime.format(zonedDateTimeFormatter));
 
         // Unix Timestamp
